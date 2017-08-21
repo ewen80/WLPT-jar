@@ -1,0 +1,32 @@
+jar{
+    baseName = 'wlpt-core'
+    version = '0.1.0'
+}
+
+sourceSets{
+    main{
+        java{
+            exclude '**/DatabaseConfig.java'
+        }
+    }
+}
+
+dependencies {
+    compile(
+            "org.springframework.boot:spring-boot-starter-data-jpa",
+            "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-starter-pw.ewen.WLPT.core.security",
+            "org.springframework.boot:spring-boot-starter-cache",
+            "org.springframework.pw.ewen.WLPT.core.security:spring-pw.ewen.WLPT.core.security-acl",
+            "com.h2database:h2",
+            "net.sf.ehcache:ehcache",
+            "org.apache.commons:commons-lang3:3.5",
+            "org.springframework.boot:spring-boot-starter-aop",
+    )
+
+    testCompile(
+            "org.springframework.boot:spring-boot-starter-test",
+            "org.springframework.pw.ewen.WLPT.core.security:spring-pw.ewen.WLPT.core.security-test",
+            files("libs/GroboTestingJUnit-1.2.1-core.jar"),
+    )
+}
