@@ -60,7 +60,7 @@ public class ControllerFilterTest {
 
     @Before
     public void init(){
-        //将spring security注入spring mvc test
+        //将spring security注入spring security test
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
                 .apply(springSecurity())

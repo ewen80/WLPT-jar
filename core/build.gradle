@@ -14,20 +14,17 @@ sourceSets{
 dependencies {
     compile(
             //spring framework依赖
-            "org.springframework:spring-context:4.3.6.RELEASE",
             "org.springframework:spring-context-support:4.3.6.RELEASE",
-            "org.springframework:spring-core:4.3.6.RELEASE",
-            "org.springframework:spring-beans:4.3.6.RELEASE",
             "org.springframework:spring-aop:4.3.6.RELEASE",
             "org.springframework:spring-aspects:4.3.6.RELEASE",
             "org.springframework:spring-expression:4.3.6.RELEASE",
             "org.springframework:spring-orm:4.3.6.RELEASE",
             "org.springframework:spring-tx:4.3.6.RELEASE",
+            "org.springframework:spring-web:4.3.6.RELEASE",
 
             //jpa依赖
             "org.springframework.data:spring-data-jpa:1.11.0.RELEASE",
             "org.hibernate:hibernate-core:5.0.11.Final",
-//            "org.springframework.boot:spring-boot-starter-data-jpa",
 
             //数据库依赖
             "com.h2database:h2:1.4.193",
@@ -35,22 +32,25 @@ dependencies {
             //security依赖
             "org.springframework.security:spring-security-acl:4.2.1.RELEASE",
             "org.springframework.security:spring-security-config:4.2.1.RELEASE",
-            "org.springframework.security:spring-security-core:4.2.1.RELEASE",
-            "org.springframework.security:spring-security-web:4.2.1.RELEASE",
+//            "org.springframework.security:spring-security-core:4.2.1.RELEASE",
+//            "org.springframework.security:spring-security-web:4.2.1.RELEASE",
 //            "org.springframework.boot:spring-boot-starter-security",
 
             //cache依赖
             "net.sf.ehcache:ehcache:2.10.3",
 //            "org.springframework.boot:spring-boot-starter-cache",
 
+            //Json
+            "com.fasterxml.jackson.core:jackson-annotations:2.8.0",
+            "com.fasterxml.jackson.core:jackson-databind:2.8.6",
+
             //其他依赖
             "org.apache.commons:commons-lang3:3.5",
     )
 
     testCompile(
-            "org.springframework.spring-test:4.3.6.RELEASE",
-//            "org.springframework.boot:spring-boot-starter-test",
-            "org.springframework.security:spring-security-test",
+            "org.springframework:spring-test:4.3.6.RELEASE",
+            "org.springframework.security:spring-security-test:4.2.1.RELEASE",
             files("libs/GroboTestingJUnit-1.2.1-core.jar"),
     )
 }

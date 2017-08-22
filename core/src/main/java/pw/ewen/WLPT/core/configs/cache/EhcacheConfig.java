@@ -26,20 +26,6 @@ public class EhcacheConfig {
         return new EhCacheBasedAclCache(manager.getCache("aclCache"), permissionGrantingStrategy, aclAuthorizationStrategy);
     }
 
-//    /**
-//     * 获取ACL的ehCache
-//     * @param cacheManager
-//     * @return
-//     */
-//    @Bean
-//    EhCacheFactoryBean getAclEhCache(CacheManager cacheManager){
-//        EhCacheFactoryBean ehCacheFactoryBean = new EhCacheFactoryBean();
-//        ehCacheFactoryBean.setCacheManager(cacheManager);
-//        ehCacheFactoryBean.setCacheName("aclCache");
-////        ehCacheFactoryBean.setTransactionalMode("local");
-//        return ehCacheFactoryBean;
-//    }
-
     /**
      * EhCache的EhCacheManager
      * @return

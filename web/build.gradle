@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+
 jar{
     baseName = 'wlpt-web'
     version = '0.1.0'
@@ -45,8 +57,20 @@ def aspectJLTW = {
 }
 
 dependencies {
+    compile(
+            "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-starter-security",
+            project(":core")
+    )
+
     javaAgent(
             "org.springframework:spring-instrument:4.3.9.RELEASE",
             "org.aspectj:aspectjweaver:1.8.9"
+    )
+
+    testCompile(
+            "org.springframework.boot:spring-boot-starter-test",
+            "org.springframework.security:spring-security-test",
+            files("libs/GroboTestingJUnit-1.2.1-core.jar"),
     )
 }

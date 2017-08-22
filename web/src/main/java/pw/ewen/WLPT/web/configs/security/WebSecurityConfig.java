@@ -1,4 +1,4 @@
-package pw.ewen.WLPT.core.configs.security;
+package pw.ewen.WLPT.web.configs.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
