@@ -4,6 +4,7 @@
     <bytecodeTargetLevel>
       <module name="core_main" target="1.8" />
       <module name="core_test" target="1.8" />
+      <module name="web_integration_test" target="1.8" />
       <module name="web_main" target="1.8" />
       <module name="web_test" target="1.8" />
       <module name="WLPT-jar_integration_test" target="1.8" />

@@ -1,9 +1,9 @@
 package pw.ewen.WLPT.core.repositories;
 
+import pw.ewen.WLPT.core.domains.entities.ResourceType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
-import domains.entities.ResourceType;
 
 /**
  * Created by wen on 17-3-12.

@@ -1,13 +1,13 @@
 package pw.ewen.WLPT.core.services;
 
+import pw.ewen.WLPT.core.domains.ResourceRangePermissionWrapper;
+import pw.ewen.WLPT.core.domains.entities.ResourceRange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.acls.domain.GrantedAuthoritySid;
 import org.springframework.security.acls.domain.ObjectIdentityImpl;
 import org.springframework.security.acls.model.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
-import domains.ResourceRangePermissionWrapper;
-import domains.entities.ResourceRange;
 import pw.ewen.WLPT.core.exceptions.security.AuthorizationException;
 import pw.ewen.WLPT.core.repositories.ResourceRangeRepository;
 import pw.ewen.WLPT.core.repositories.RoleRepository;

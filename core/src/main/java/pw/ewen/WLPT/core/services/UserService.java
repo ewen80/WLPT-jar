@@ -1,8 +1,8 @@
 package pw.ewen.WLPT.core.services;
 
+import pw.ewen.WLPT.core.domains.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import domains.entities.User;
 import pw.ewen.WLPT.core.repositories.UserRepository;
 import pw.ewen.WLPT.core.repositories.specifications.UserSpecificationBuilder;
 

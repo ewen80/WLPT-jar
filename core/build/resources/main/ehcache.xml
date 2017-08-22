@@ -1,0 +1,7 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="false"
+         maxBytesLocalHeap="100M">
+    <cache name="aclCache" />
+    <cache name="resourceTypeInDBCache" />
+</ehcache>

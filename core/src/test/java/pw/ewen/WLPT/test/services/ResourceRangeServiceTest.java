@@ -1,14 +1,14 @@
 package pw.ewen.WLPT.test.services;
 
+import pw.ewen.WLPT.core.domains.entities.ResourceRange;
+import pw.ewen.WLPT.core.domains.entities.ResourceType;
+import pw.ewen.WLPT.core.domains.entities.Role;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import domains.entities.ResourceRange;
-import domains.entities.ResourceType;
-import domains.entities.Role;
 import pw.ewen.WLPT.core.repositories.ResourceRangeRepository;
 import pw.ewen.WLPT.core.repositories.ResourceTypeRepository;
 import pw.ewen.WLPT.core.repositories.RoleRepository;

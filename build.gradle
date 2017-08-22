@@ -1,9 +1,19 @@
-subprojects {
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+buildscript {
+//    repositories {
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+//    }
+}
 
+subprojects {
     apply plugin: 'java'
     apply plugin: 'idea'
+//    apply plugin: 'org.springframework.boot'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 
     repositories {
         mavenCentral()

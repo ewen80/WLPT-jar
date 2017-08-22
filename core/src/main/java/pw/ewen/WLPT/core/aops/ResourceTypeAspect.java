@@ -1,12 +1,12 @@
 package pw.ewen.WLPT.core.aops;
 
 
+import pw.ewen.WLPT.core.domains.entities.ResourceType;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.cache.annotation.Cacheable;
-import domains.entities.ResourceType;
 import pw.ewen.WLPT.core.services.ResourceTypeService;
 
 /**

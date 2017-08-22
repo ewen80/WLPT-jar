@@ -2,7 +2,6 @@ package pw.ewen.WLPT.core.domains.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.stereotype.Component;
 import pw.ewen.WLPT.core.domains.Resource;
 
 import javax.persistence.*;

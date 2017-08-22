@@ -1,6 +1,6 @@
 package pw.ewen.WLPT.core.repositories.specifications;
 
-import domains.entities.MyResource;
+import pw.ewen.WLPT.core.domains.entities.MyResource;
 import pw.ewen.WLPT.core.repositories.specifications.core.SearchSpecificationsBuilder;
 
 /**

@@ -1,13 +1,11 @@
 package pw.ewen.WLPT.core.services;
 
+import pw.ewen.WLPT.core.domains.entities.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import domains.entities.ResourceType;
-import domains.entities.Role;
-import domains.entities.User;
 import pw.ewen.WLPT.core.exceptions.domain.DeleteHaveUsersRoleException;
 import pw.ewen.WLPT.core.repositories.RoleRepository;
 

@@ -1,12 +1,12 @@
 package pw.ewen.WLPT.test.repository.resources;
 
+import pw.ewen.WLPT.core.domains.entities.Menu;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import domains.entities.Menu;
 import pw.ewen.WLPT.core.repositories.MenuRepository;
 
 import javax.transaction.Transactional;

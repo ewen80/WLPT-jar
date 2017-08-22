@@ -1,5 +1,8 @@
 package pw.ewen.WLPT.test.repository.specifications;
 
+import pw.ewen.WLPT.core.domains.entities.MyResource;
+import pw.ewen.WLPT.core.domains.entities.Role;
+import pw.ewen.WLPT.core.domains.entities.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,9 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-import domains.entities.MyResource;
-import domains.entities.Role;
-import domains.entities.User;
 import pw.ewen.WLPT.core.repositories.MyResourceRepository;
 import pw.ewen.WLPT.core.repositories.RoleRepository;
 import pw.ewen.WLPT.core.repositories.UserRepository;

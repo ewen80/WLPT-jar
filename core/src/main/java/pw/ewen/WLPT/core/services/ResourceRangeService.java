@@ -1,9 +1,9 @@
 package pw.ewen.WLPT.core.services;
 
+import pw.ewen.WLPT.core.domains.entities.ResourceRange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
-import domains.entities.ResourceRange;
 import pw.ewen.WLPT.core.repositories.ResourceRangeRepository;
 import pw.ewen.WLPT.core.repositories.ResourceTypeRepository;
 import pw.ewen.WLPT.core.repositories.RoleRepository;

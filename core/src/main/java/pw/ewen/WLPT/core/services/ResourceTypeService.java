@@ -1,12 +1,11 @@
 package pw.ewen.WLPT.core.services;
 
+import pw.ewen.WLPT.core.domains.entities.ResourceType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import domains.Resource;
-import domains.entities.ResourceType;
 import pw.ewen.WLPT.core.repositories.ResourceTypeRepository;
 import pw.ewen.WLPT.core.repositories.specifications.ResourceTypeSpecificationBuilder;
 

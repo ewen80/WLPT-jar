@@ -1,16 +1,15 @@
 package pw.ewen.WLPT.core.security.acl;
 
+import pw.ewen.WLPT.core.domains.NeverMatchedResourceRange;
+import pw.ewen.WLPT.core.domains.Resource;
+import pw.ewen.WLPT.core.domains.entities.ResourceRange;
+import pw.ewen.WLPT.core.domains.entities.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.acls.domain.IdentityUnavailableException;
 import org.springframework.security.acls.domain.ObjectIdentityImpl;
 import org.springframework.security.acls.model.ObjectIdentity;
 import org.springframework.security.acls.model.ObjectIdentityRetrievalStrategy;
 import org.springframework.stereotype.Component;
-import domains.NeverMatchedResourceRange;
-import domains.Resource;
-import domains.entities.ResourceRange;
-import domains.entities.ResourceType;
-import domains.entities.Role;
 import pw.ewen.WLPT.core.repositories.ResourceRangeRepository;
 import pw.ewen.WLPT.core.security.UserContext;
 

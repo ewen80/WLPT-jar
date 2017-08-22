@@ -1,5 +1,3 @@
-
-
 jar{
     baseName = 'wlpt-web'
     version = '0.1.0'
@@ -45,10 +43,6 @@ def aspectJLTW = {
 
     println jvmArgs
 }
-
-bootRun.doFirst aspectJLTW
-test.doFirst aspectJLTW
-integrationTest.doFirst  aspectJLTW
 
 dependencies {
     javaAgent(

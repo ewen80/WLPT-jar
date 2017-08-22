@@ -1,5 +1,8 @@
 package pw.ewen.WLPT.core.services;
 
+import pw.ewen.WLPT.core.domains.entities.Menu;
+import pw.ewen.WLPT.core.domains.entities.Role;
+import pw.ewen.WLPT.core.domains.entities.User;
 import org.hibernate.HibernateException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -7,9 +10,6 @@ import org.springframework.security.acls.domain.BasePermission;
 import org.springframework.security.acls.domain.GrantedAuthoritySid;
 import org.springframework.security.acls.model.*;
 import org.springframework.stereotype.Service;
-import domains.entities.Menu;
-import domains.entities.Role;
-import domains.entities.User;
 import pw.ewen.WLPT.core.repositories.MenuRepository;
 import pw.ewen.WLPT.core.security.acl.ObjectIdentityRetrievalStrategyWLPTImpl;
 
