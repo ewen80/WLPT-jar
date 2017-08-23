@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import domains.entities.MyResource;
+import pw.ewen.WLPT.core.domains.entities.MyResource;
 import pw.ewen.WLPT.core.repositories.MyResourceRepository;
 import pw.ewen.WLPT.core.repositories.specifications.MyResourceSpecificationBuilder;
 

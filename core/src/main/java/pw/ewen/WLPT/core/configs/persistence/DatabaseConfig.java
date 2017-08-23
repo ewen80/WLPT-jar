@@ -1,10 +1,13 @@
-package pw.ewen.WLPT.core.configs.persistence;
+//package pw.ewen.WLPT.core.configs.persistence;
 
 //import org.apache.tomcat.jdbc.pool.DataSource;
 
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
 //@Configuration
 //@EnableJpaRepositories(basePackages="pw.ewen.WLPT.core.repositories")
-public class DatabaseConfig {
+//public class DatabaseConfig {
 
 //	@Bean
 //	public DataSource datasource(){
@@ -43,4 +46,4 @@ public class DatabaseConfig {
 //		emfb.afterPropertiesSet();
 //		return emfb;
 //	}
-}
+//}

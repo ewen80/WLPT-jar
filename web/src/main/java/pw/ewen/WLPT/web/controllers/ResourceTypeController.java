@@ -9,7 +9,7 @@ import org.springframework.security.access.prepost.PostFilter;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.access.prepost.PreFilter;
 import org.springframework.web.bind.annotation.*;
-import domains.entities.ResourceType;
+import pw.ewen.WLPT.core.domains.entities.ResourceType;
 import pw.ewen.WLPT.core.repositories.ResourceTypeRepository;
 import pw.ewen.WLPT.core.repositories.specifications.ResourceTypeSpecificationBuilder;
 import pw.ewen.WLPT.core.services.ResourceTypeService;
