@@ -17,4 +17,6 @@ public interface MenuRepository extends JpaRepository<Menu, Long>, JpaSpecificat
     List<Menu> findByOrderIdGreaterThanEqualAndParent_id(int orderId, Long parentId);
     //获取该父节点下orderId最大的menu
     Menu findTopByParent_idOrderByOrderIdDesc(Long parentId);
+
+    Menu findByName(String name);
 }
