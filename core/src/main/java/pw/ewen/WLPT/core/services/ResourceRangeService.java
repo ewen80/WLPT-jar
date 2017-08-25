@@ -1,5 +1,6 @@
 package pw.ewen.WLPT.core.services;
 
+import org.springframework.stereotype.Component;
 import pw.ewen.WLPT.core.domains.entities.ResourceRange;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -18,8 +18,11 @@ import java.util.Collection;
 @Service("resourceTypeService")
 public class ResourceTypeService {
 
-    @Autowired
     private ResourceTypeRepository resourceTypeRepository;
+
+    public ResourceTypeService(ResourceTypeRepository resourceTypeRepository) {
+        this.resourceTypeRepository = resourceTypeRepository;
+    }
 
     /**
      * 获取单个ResourceType

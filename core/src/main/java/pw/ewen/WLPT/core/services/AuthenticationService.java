@@ -3,6 +3,7 @@ package pw.ewen.WLPT.core.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import pw.ewen.WLPT.core.repositories.UserRepository;
 
@@ -15,10 +16,15 @@ import java.util.HashMap;
  */
 @Service
 public class AuthenticationService {
-    @Autowired
+
     private UserRepository userRepository;
-    @Autowired
     private UserDetailsService userDetailsService;
+
+    @Autowired
+    public AuthenticationService(UserRepository userRepository, UserDetailsService userDetailsService) {
+        this.userRepository = userRepository;
+        this.userDetailsService = userDetailsService;
+    }
 
     //用户认证接口
     public boolean checkAuthentication(HashMap<String,String> authInfo){

@@ -26,9 +26,6 @@ dependencies {
             "org.springframework.data:spring-data-jpa:1.11.0.RELEASE",
             "org.hibernate:hibernate-core:5.0.11.Final",
 
-            //数据库依赖
-            "com.h2database:h2:1.4.193",
-
             //security依赖
             "org.springframework.security:spring-security-acl:4.2.1.RELEASE",
             "org.springframework.security:spring-security-config:4.2.1.RELEASE",

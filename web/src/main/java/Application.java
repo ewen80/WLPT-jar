@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 /**
  * Created by wenliang on 17-1-24.
  */
-@SpringBootApplication(scanBasePackages="pw.ewen.WLPT.web")
+@SpringBootApplication(scanBasePackages="pw.ewen.WLPT")
 @EnableJpaRepositories(basePackages = "pw.ewen.WLPT.core.repositories")
 @EntityScan("pw.ewen.WLPT.core.domains.entities")
 public class Application {

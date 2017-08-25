@@ -19,8 +19,11 @@ import java.util.List;
 @Service("roleService")
 public class RoleService {
 
-    @Autowired
     private RoleRepository roleRepository;
+
+    public RoleService(RoleRepository roleRepository) {
+        this.roleRepository = roleRepository;
+    }
 
     /**
      * 删除角色,如果角色下有用户则不允许删除,即便有一个有用户则整批都不删除

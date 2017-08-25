@@ -1,5 +1,6 @@
 package pw.ewen.WLPT.core.services;
 
+import org.springframework.stereotype.Component;
 import pw.ewen.WLPT.core.domains.entities.Menu;
 import pw.ewen.WLPT.core.domains.entities.Role;
 import pw.ewen.WLPT.core.domains.entities.User;
@@ -25,18 +26,22 @@ import java.util.List;
 @Service
 public class MenuService {
 
-    @Autowired
     private MenuRepository menuRepository;
-    @Autowired
     private PermissionService permissionService;
-    @Autowired
     private MutableAclService aclService;
-    @Autowired
     private UserService userService;
-    @Autowired
     private EntityManager entityManager;
-    @Autowired
     private ObjectIdentityRetrievalStrategyWLPTImpl objectIdentityRetrieval;
+
+    @Autowired
+    public MenuService(MenuRepository menuRepository, PermissionService permissionService, MutableAclService aclService, UserService userService, EntityManager entityManager, ObjectIdentityRetrievalStrategyWLPTImpl objectIdentityRetrieval) {
+        this.menuRepository = menuRepository;
+        this.permissionService = permissionService;
+        this.aclService = aclService;
+        this.userService = userService;
+        this.entityManager = entityManager;
+        this.objectIdentityRetrieval = objectIdentityRetrieval;
+    }
 
     /**
      * 获取所有菜单

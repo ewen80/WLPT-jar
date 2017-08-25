@@ -36,8 +36,6 @@ public class ApplicationInitialization implements ApplicationRunner {
         this.initialMenu();
     }
 
-
-
     //初始化角色（默认为admin,guest）
     private void initialRoles(){
         String adminRoleId = propertyConfig.getDefaultAdminRoleId();
@@ -56,7 +54,6 @@ public class ApplicationInitialization implements ApplicationRunner {
             Role guestRole = new Role(guestRoleId,guestRoleName);
             this.roleRepository.save(guestRole);
         }
-
     }
 
     //初始化用户（默认为admin,guest）

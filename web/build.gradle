@@ -58,6 +58,9 @@ dependencies {
             "org.springframework.boot:spring-boot-starter-web",
             "org.springframework.boot:spring-boot-starter-data-jpa",
             "org.springframework.boot:spring-boot-starter-security",
+
+            //数据库依赖
+            "com.h2database:h2:1.4.193",
             project(":core")
     )
 

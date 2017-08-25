@@ -1,5 +1,6 @@
 package pw.ewen.WLPT.core.configs.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,6 +24,7 @@ public class SecurityUserService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
+    @Autowired
     public SecurityUserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }

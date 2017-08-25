@@ -12,13 +12,16 @@ import java.util.List;
 /**
  * Created by wenliang on 17-4-14.
  */
-@Service
+@Service("userService")
 public class UserService {
 
-    @Autowired
     private UserRepository userRepository;
 
-//    /**
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    //    /**
 //     * 返回翻页格式用户列表
 //     * @param spec 过滤表达式
 //     * @param pr    分页对象
