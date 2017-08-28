@@ -23,13 +23,13 @@ public class ResourceTypeAspect {
         this.resourceTypeService = resourceTypeService;
     }
 
-    @Pointcut("execution(domains.Resource+.new(..))")
+    @Pointcut("execution(pw.ewen.WLPT.core.domains.Resource+.new(..))")
     private void resourceConstructor(){}
 
     @Pointcut("!cflow(execution(* pw.ewen.WLPT.core.aops.ResourceTypeAspect.initialResourceTypeInDB(..)))")
     private void noRecursive(){}
 
-    @Pointcut("!this(domains.NeverMatchedResourceRange)")
+    @Pointcut("!this(pw.ewen.WLPT.core.domains.NeverMatchedResourceRange)")
     private void excludeResourceType(){}
 
 

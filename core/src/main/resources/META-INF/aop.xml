@@ -9,11 +9,8 @@
             This should encompass any class that wants to utilize the aspects,
             and does not need to encompass the aspects themselves.
         -->
-        <include within="Resource+" />
-        <!--<include withservicesices.ResourceTypeService" />-->
+        <include within="pw.ewen.WLPT.core.domains.Resource+" />
         <include within="pw.ewen.WLPT.core.aops.*"/>
-        <exclude within="pw.ewen.WLPT.test..*"/>
-        <exclude within="controllers..*"/>
     </weaver>
 
     <aspects>

@@ -1,3 +1,5 @@
+package pw.ewen.WLPT.web;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
