@@ -43,8 +43,18 @@ public class SearchSpecificationsBuilder<T> {
     public Specification<T> build(String filterString) {
 
         String operationSetExper = StringUtils.join(SearchOperation.SIMPLE_OPERATION_SET, '|');
+        //找出操作符中不同的字符，作为正则匹配中value中不允许出现的字符
+        String operationString = StringUtils.join(SearchOperation.SIMPLE_OPERATION_SET);
+        StringBuilder operationDistinctString = new StringBuilder();
+        for(char c : operationString.toCharArray()) {
+            if(!operationDistinctString.toString().contains(String.valueOf(c))) {
+                operationDistinctString.append(c);
+            }
+        }
+
+
         Pattern pattern = Pattern.compile(
-                "(\\S+?)(" + operationSetExper + ")(\\*?)([^*]*)(\\*?),");
+                "(\\S+?)(" + operationSetExper + ")(\\*?)([^*,"+operationDistinctString.toString()+"]*)(\\*?),");
         Matcher matcher = pattern.matcher(filterString + ",");
         while (matcher.find()) {
             this.with(
