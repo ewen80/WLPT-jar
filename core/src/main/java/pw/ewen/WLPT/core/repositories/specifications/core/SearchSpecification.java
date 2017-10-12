@@ -6,6 +6,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
+import java.time.LocalDate;
 
 
 /**
@@ -40,13 +41,30 @@ public class SearchSpecification<T> implements Specification<T> {
             case NEGATION:
                 return builder.notEqual(root.get(criteria.getKey()), criteria.getValue());
             case GREATER_THAN:
-                return builder.greaterThan(root.<String> get(criteria.getKey()), criteria.getValue().toString());
+                if(LocalDate.class.isInstance(criteria.getValue())) {
+                    return builder.greaterThan(root.<LocalDate>get(criteria.getKey()), (LocalDate)criteria.getValue());
+                } else {
+                    return builder.greaterThan(root.<String>get(criteria.getKey()), criteria.getValue().toString());
+                }
+
             case GREATER_THAN_EQUALITY:
-                return builder.greaterThanOrEqualTo(root.<String>get(criteria.getKey()), criteria.getValue().toString());
+                if(LocalDate.class.isInstance(criteria.getValue())) {
+                    return builder.greaterThanOrEqualTo(root.<LocalDate>get(criteria.getKey()), (LocalDate)criteria.getValue());
+                } else {
+                    return builder.greaterThanOrEqualTo(root.<String>get(criteria.getKey()), criteria.getValue().toString());
+                }
             case LESS_THAN:
-                return builder.lessThan(root.<String> get(criteria.getKey()), criteria.getValue().toString());
+                if(LocalDate.class.isInstance(criteria.getValue())) {
+                    return builder.lessThan(root.<LocalDate>get(criteria.getKey()), (LocalDate)criteria.getValue());
+                } else {
+                    return builder.lessThan(root.<String>get(criteria.getKey()), criteria.getValue().toString());
+                }
             case LESS_THAN_EQUALITY:
-                return builder.lessThanOrEqualTo(root.<String> get(criteria.getKey()), criteria.getValue().toString());
+                if(LocalDate.class.isInstance(criteria.getValue())) {
+                    return builder.lessThanOrEqualTo(root.<LocalDate>get(criteria.getKey()), (LocalDate)criteria.getValue());
+                } else {
+                    return builder.lessThanOrEqualTo(root.<String>get(criteria.getKey()), criteria.getValue().toString());
+                }
             case LIKE:
                 return builder.like(root.<String> get(criteria.getKey()), criteria.getValue().toString());
             case STARTS_WITH:
